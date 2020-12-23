@@ -296,11 +296,11 @@ const topicPage = (element) => {
     }).then((res) => res.json())
     .then((res) => {
       console.log("success");
-    })
-    fetch(`${url}/comments/${element._id}`)
-    .then((res) => res.json())
-    .then((res) => {
-      commentSection(res);
+      fetch(`${url}/comments/${element._id}`)
+      .then((res) => res.json())
+      .then((res) => {
+        commentSection(res);
+      })
     })
   })
 
